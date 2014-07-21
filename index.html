@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jadx by skylot</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/skylot/jadx">View On GitHub</a></li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Jadx</h1>
+          <p>Dex to Java decompiler</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/skylot">skylot</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h2>
+<a name="jadx" class="anchor" href="#jadx"><span class="octicon octicon-link"></span></a>JADX</h2>
+
+<p><strong>jadx</strong> - Dex to Java decompiler</p>
+
+<p>Command line and GUI tools for produce Java source code from Android Dex and Apk files</p>
+
+<a href="jadx-gui.png">
+<img src="jadx-gui.png" alt="Jadx-gui screenshot" width="600" align="middle">
+</a>
+
+<h3>
+<a name="downloads" class="anchor" href="#downloads"><span class="octicon octicon-link"></span></a>Downloads</h3>
+
+<ul>
+<li><a href="https://drone.io/github.com/skylot/jadx/files">unstable</a></li>
+<li>from <a href="https://github.com/skylot/jadx/releases">github</a>
+</li>
+<li>from <a href="http://sourceforge.net/projects/jadx/files/">sourceforge</a>
+</li>
+</ul><h3>
+<a name="building-from-source" class="anchor" href="#building-from-source"><span class="octicon octicon-link"></span></a>Building from source</h3>
+
+<pre><code>git clone https://github.com/skylot/jadx.git
+cd jadx
+./gradlew dist
+</code></pre>
+
+<p>(on Windows, use <code>gradlew.bat</code> instead of <code>./gradlew</code>)</p>
+
+<p>Scripts for run jadx will be placed in <code>build/jadx/bin</code>
+and also packed to <code>build/jadx-&lt;version&gt;.zip</code></p>
+
+<h3>
+<a name="run" class="anchor" href="#run"><span class="octicon octicon-link"></span></a>Run</h3>
+
+<p>Run <strong>jadx</strong> on itself:</p>
+
+<pre><code>cd build/jadx/
+bin/jadx -d out lib/jadx-core-*.jar
+#or
+bin/jadx-gui lib/jadx-core-*.jar
+</code></pre>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<pre><code>jadx[-gui] [options] &lt;input file&gt; (.dex, .apk or .jar)
+options:
+ -d, --output-dir    - output directory
+ -j, --threads-count - processing threads count
+ -f, --fallback      - make simple dump (using goto instead of 'if', 'for', etc)
+     --cfg           - save methods control flow graph to dot file
+     --raw-cfg       - save methods control flow graph (use raw instructions)
+ -v, --verbose       - verbose output
+ -h, --help          - print this help
+Example:
+ jadx -d out classes.dex
+</code></pre>
+
+<p><em>Licensed under the Apache 2.0 License</em></p>
+
+<p><em>Copyright 2014 by Skylot</em></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
